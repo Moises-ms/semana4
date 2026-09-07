@@ -13,3 +13,7 @@ def calculate_discount(subtotal):
     else:
         discount_val = 0.0
     return discount_val
+
+def calculate_vat(amount):
+    vat_val = amount * 0.15
+    return vat_val
