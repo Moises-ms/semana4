@@ -25,3 +25,12 @@ def display_summary(product, subtotal, discount, vat, total):
     print("Descuento (8%): C$", round(discount, 2))
     print("IVA (15%): C$", round(vat, 2))
     print("Total a pagar: C$", round(total, 2))
+
+# Flujo principal invocando las funciones y el procedimiento
+subtotal = calculate_subtotal(product_price, product_quantity)
+discount = calculate_discount(subtotal)
+discounted_amount = subtotal - discount
+vat = calculate_vat(discounted_amount)
+total = discounted_amount + vat
+
+display_summary(product_name, subtotal, discount, vat, total)
