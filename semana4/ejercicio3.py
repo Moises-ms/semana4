@@ -17,3 +17,11 @@ def calculate_discount(subtotal):
 def calculate_vat(amount):
     vat_val = amount * 0.15
     return vat_val
+
+def display_summary(product, subtotal, discount, vat, total):
+    print("\n--- RESUMEN DE COMPRA ---")
+    print("Producto:", product)
+    print("Subtotal: C$", round(subtotal, 2))
+    print("Descuento (8%): C$", round(discount, 2))
+    print("IVA (15%): C$", round(vat, 2))
+    print("Total a pagar: C$", round(total, 2))
